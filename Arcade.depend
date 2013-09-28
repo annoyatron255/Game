@@ -1,0 +1,234 @@
+# depslib dependency file v1.0
+1377334428 source:c:\cygwin\home\greg\mycode\c++\projects\arcade\arcade\main.cpp
+	<cstdlib>
+	<stdlib.h>
+	"SDL/SDL.h"
+	"gfxlib.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1326114587 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_config.h
+	"SDL_platform.h"
+	"SDL_config_dreamcast.h"
+	"SDL_config_macos.h"
+	"SDL_config_macosx.h"
+	"SDL_config_symbian.h"
+	"SDL_config_win32.h"
+	"SDL_config_os2.h"
+	"SDL_config_minimal.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_platform.h
+
+1325748922 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl_config_dreamcast.h
+	"SDL_platform.h"
+
+1325748922 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl_platform.h
+
+1325748922 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl_config_macos.h
+	"SDL_platform.h"
+	<MacTypes.h>
+
+1325748922 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl_config_macosx.h
+	"SDL_platform.h"
+	<AvailabilityMacros.h>
+
+1325748922 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl_config_symbian.h
+	"SDL_platform.h"
+	<stdarg.h>
+	<stddef.h>
+
+1326114594 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_config_win32.h
+	"SDL_platform.h"
+
+1325748922 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl_config_os2.h
+	"SDL_platform.h"
+
+1325748922 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl_config_minimal.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1326114600 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\begin_code.h
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\close_code.h
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_keysym.h
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742239 c:\documents and settings\greg\my documents\sdl-1.2.15\include\sdl\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1370979052 c:\cygwin\home\greg\mycode\c++\projects\arcade\arcade\lib.h
+	<iostream>
+	<SDL/SDL.h>
+
+1374979631 c:\cygwin\home\greg\mycode\c++\projects\arcade\arcade\gfxlib.h
+	<iostream>
+	<SDL/SDL.h>
+
+1371137316 c:\cygwin\home\greg\mycode\c++\projects\arcade\arcade\cdlib.h
+	<iostream>
+	<SDL/SDL.h>
+
