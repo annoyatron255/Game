@@ -42,8 +42,9 @@
 			<Add library="dxguid" />
 			<Add directory="C:/Documents and Settings/greg/My Documents/SDL-1.2.15/lib" />
 		</Linker>
-		<Unit filename="cb.bmp" />
-		<Unit filename="cdlib.h" />
+		<Unit filename="gfx/e1.bmp" />
+		<Unit filename="gfx/s1.bmp" />
+		<Unit filename="gfx/s1sneek.bmp" />
 		<Unit filename="gfxlib.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
