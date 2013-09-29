@@ -4,54 +4,49 @@
 
 #ifndef gfxlib_h
 #define gfxlib_h
-#include <iostream>
-#include <SDL/SDL.h>
+#include <SDL2/SDL.h>
+#include <cstdio>
 
+SDL_Window* hardwin = 0;
 SDL_Surface* screen = 0;
 SDL_Rect dstrect;
 SDL_Rect partrect;
 
-int initgfx(int x, int y, int bitcolor) {
-    // initialize SDL video
-    if ( SDL_Init( SDL_INIT_CDROM | SDL_INIT_VIDEO ) < 0 ) {
-        printf( "Unable to init SDL: %s\n", SDL_GetError() );
-        return 1;
-    }
-    screen = SDL_SetVideoMode(x, y, bitcolor, SDL_HWSURFACE|SDL_DOUBLEBUF);
-    if ( !screen ) {
-        printf("Unable to set video: %s\n", SDL_GetError());
-        return 1;
-    }
-    return 0; // return success!
-}
-
-int initgfxfull(int x, int y, int bitcolor) {
-    // initialize SDL video
-    if ( SDL_Init( SDL_INIT_CDROM | SDL_INIT_VIDEO ) < 0 ) {
-        printf( "Unable to init SDL: %s\n", SDL_GetError() );
-        return 1;
-    }
-    screen = SDL_SetVideoMode(x, y, bitcolor, SDL_HWSURFACE|SDL_DOUBLEBUF|SDL_FULLSCREEN);
-    if ( !screen ) {
-        printf("Unable to set video: %s\n", SDL_GetError());
-        return 1;
-    }
-    return 0; // return success!
+int initgfx(int x, int y) {
+    //Initialize SDL
+	if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
+	{
+		printf( "SDL could not initialize! SDL_Error: %s\n", SDL_GetError() );
+		return 1;
+	}
+	else
+	{
+		//Create window
+		hardwin = SDL_CreateWindow( "SDL Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, x, y, SDL_WINDOW_SHOWN );
+		if( hardwin == NULL )
+		{
+			printf( "Window could not be created! SDL_Error: %s\n", SDL_GetError() );
+			return 1;
+		}
+		else
+		{
+			//Get window surface
+			screen = SDL_GetWindowSurface( hardwin );
+		}
+	}
+	return 0;
 }
 
 int update(void) {
-    SDL_Flip(screen);
+    SDL_UpdateWindowSurface(hardwin);
     return 0; // return success!
 }
 
 int displaybitmap(const char* file, int x, int y) {
-    SDL_Surface* Surf_Temp = 0;
     SDL_Surface* Surf_Return = 0;
-    if((Surf_Temp = SDL_LoadBMP(file)) == 0) {
+    if((Surf_Return = SDL_LoadBMP(file)) == 0) {
         return 0;
     }
-    Surf_Return = SDL_DisplayFormat(Surf_Temp);
-    SDL_FreeSurface(Surf_Temp);
     dstrect.x = x;
     dstrect.y = y;
     SDL_BlitSurface(Surf_Return, 0, screen, &dstrect);
@@ -60,13 +55,10 @@ int displaybitmap(const char* file, int x, int y) {
 }
 
 int displaybitmap(const char* file, int x, int y, int x2, int y2, int w, int h) {
-    SDL_Surface* Surf_Temp = 0;
     SDL_Surface* Surf_Return = 0;
-    if((Surf_Temp = SDL_LoadBMP(file)) == 0) {
+    if((Surf_Return = SDL_LoadBMP(file)) == 0) {
         return 0;
     }
-    Surf_Return = SDL_DisplayFormat(Surf_Temp);
-    SDL_FreeSurface(Surf_Temp);
     dstrect.x = x;
     dstrect.y = y;
     partrect.x = x2;
@@ -79,36 +71,30 @@ int displaybitmap(const char* file, int x, int y, int x2, int y2, int w, int h) 
 }
 
 int displaybitmap(const char* file, int x, int y, int r, int b, int g) {
-    SDL_Surface* Surf_Temp = 0;
     SDL_Surface* Surf_Return = 0;
-    if((Surf_Temp = SDL_LoadBMP(file)) == 0) {
+    if((Surf_Return = SDL_LoadBMP(file)) == 0) {
         return 0;
     }
-    Surf_Return = SDL_DisplayFormat(Surf_Temp);
-    SDL_FreeSurface(Surf_Temp);
     dstrect.x = x;
     dstrect.y = y;
-    SDL_SetColorKey(Surf_Return, SDL_SRCCOLORKEY | SDL_RLEACCEL, SDL_MapRGB(Surf_Return->format, r, g, b));
+    SDL_SetColorKey(Surf_Return, SDL_TRUE | SDL_RLEACCEL, SDL_MapRGB(Surf_Return->format, r, g, b));
     SDL_BlitSurface(Surf_Return, 0, screen, &dstrect);
     SDL_FreeSurface(Surf_Return);
     return 0; // return success!
 }
 
 int displaybitmap(const char* file, int x, int y, int x2, int y2, int w, int h, int r, int g, int b) {
-    SDL_Surface* Surf_Temp = 0;
     SDL_Surface* Surf_Return = 0;
-    if((Surf_Temp = SDL_LoadBMP(file)) == 0) {
+    if((Surf_Return = SDL_LoadBMP(file)) == 0) {
         return 0;
     }
-    Surf_Return = SDL_DisplayFormat(Surf_Temp);
-    SDL_FreeSurface(Surf_Temp);
     dstrect.x = x;
     dstrect.y = y;
     partrect.x = x2;
     partrect.y = y2;
     partrect.w = w;
     partrect.h = h;
-    SDL_SetColorKey(Surf_Return, SDL_SRCCOLORKEY | SDL_RLEACCEL, SDL_MapRGB(Surf_Return->format, r, g, b));
+    SDL_SetColorKey(Surf_Return, SDL_TRUE | SDL_RLEACCEL, SDL_MapRGB(Surf_Return->format, r, g, b));
     SDL_BlitSurface(Surf_Return, &partrect, screen, &dstrect);
     SDL_FreeSurface(Surf_Return);
     return 0; // return success!

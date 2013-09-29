@@ -20,7 +20,7 @@
     #include <stdlib.h>
 #endif
 
-#include "SDL/SDL.h" // include SDL lib for gfx + sound install SDL in compliers include directory!
+#include "SDL2/SDL.h" // include SDL lib for gfx + sound install SDL in compliers include directory!
 #include "gfxlib.h" // general gfx lib I made for SDL
 
 int speed = 3;
@@ -56,9 +56,10 @@ bool shift = 0;
 
 int main ( int argc, char** argv ) { // init for SDL
     /** INIT. ALL LIBRARYS */
-    initgfx(screenx, screeny, 8); // open window with 620x480 res. with 8 bit color
+    initgfx(screenx, screeny); // open window with 620x480 res. with 8 bit color
     /** INIT. ALL LIBRARYS END */
     atexit(closegfx); // make sure SDL cleans up before exit
+    clearscreen(0,0,0);
     //SDL_ShowCursor(SDL_DISABLE);
     /* program main loop */
     //displaybitmap("gfx/metroid.bmp", 0, 0); // set background.
