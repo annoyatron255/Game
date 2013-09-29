@@ -9,11 +9,15 @@
 			<Target title="Debug">
 				<Option output="bin/Debug/Arcade" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
-				<Option type="1" />
+				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="../../SDL_2.0/include" />
 				</Compiler>
+				<Linker>
+					<Add directory="../../SDL_2.0/lib" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/Arcade" prefix_auto="1" extension_auto="1" />
@@ -29,22 +33,29 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-O3" />
 			<Add option="-Wall" />
 			<Add directory="C:/Documents and Settings/greg/My Documents/SDL-1.2.15/include" />
 		</Compiler>
 		<Linker>
 			<Add library="mingw32" />
-			<Add library="SDLmain" />
-			<Add library="SDL.dll" />
+			<Add library="SDL2main" />
+			<Add library="SDL2.dll" />
 			<Add library="user32" />
 			<Add library="gdi32" />
 			<Add library="winmm" />
 			<Add library="dxguid" />
 			<Add directory="C:/Documents and Settings/greg/My Documents/SDL-1.2.15/lib" />
 		</Linker>
-		<Unit filename="gfx/e1.bmp" />
-		<Unit filename="gfx/s1.bmp" />
-		<Unit filename="gfx/s1sneek.bmp" />
+		<Unit filename="gfx/e1.bmp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="gfx/s1.bmp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="gfx/s1sneek.bmp">
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="gfxlib.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
