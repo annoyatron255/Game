@@ -42,8 +42,8 @@ int s1x = 0;
 int s1y = 0;
 int e1w = 16;
 int e1h = 16;
-int e1x = 300;
-int e1y = 300;
+int e1x = 400;
+int e1y = 400;
 /** CHARS ARE DONE */
 int mousex;
 int mousey;
