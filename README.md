@@ -17,3 +17,11 @@ TODO:
 	Add in font support.
 	Render Better using SDL Textures.
 	Convert game to a sidescoller.
+	
+	Graphical TODO:
+	    Convert bmp imagess to sidescrooler.
+	    add walls, coins, buttons, and mouse curser.
+	  
+	    
+	    
+	  
