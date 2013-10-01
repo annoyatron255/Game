@@ -67,7 +67,7 @@ int main ( int argc, char** argv ) { // init for SDL
     clearscreen(0,0,0);
     //SDL_ShowCursor(SDL_DISABLE);
     /* program main loop */
-    //displaybitmap("gfx/metroid.bmp", 0, 0); // set background.
+    //displaybitmap("gfx/bkrnd.bmp", 0, 0); // set background.
     bool done = false; // make bool done for while statment
     while (!done) { // loop until done = true
         // message processing loop
