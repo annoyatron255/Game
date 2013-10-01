@@ -2,6 +2,18 @@
  *  Gfx example and Audio example.
  */
 
+// The todos below are for all files in this project.
+// TODO: Enable mouse support.
+// TODO: Make input easier to interface with.
+// TODO: Increase gfx support with common functions.
+// TODO: Add library for game support.
+// TODO: Enable WAV playback support.
+// TODO: Make variation of library that enables OpenGL support.
+// TODO: Improve debugging code.
+// TODO: Do as much of main loop in library.
+// TODO: Add in support for changing mouse cursor.
+// TODO: Add in font support.
+
 #ifdef __cplusplus  // choose what c++ io lib to use
     #include <cstdlib>
 #else
@@ -11,8 +23,7 @@
 #include "SDL2/SDL.h" // include SDL lib for gfx + sound install SDL in compliers include directory!
 #include "gfxlib.h" // general gfx lib I made for SDL
 
-int speed = 3;
-int espeed = 2;
+int speed = 3; int espeed = 2;
 int FPS = 60;
 #define screenx 620
 #define screeny 480
@@ -20,31 +31,16 @@ Uint32 waittime = 1000.0f/FPS;
 Uint32 framestarttime = 0;
 Sint32 delaytime;
 /** BULLETS ARE CREATED */
-int bulletw = 1;
-int bulleth = 1;
+int bulletw = 1; int bulleth = 1;
 /** BULLETS ARE DONE */
 /**CHARS ARE MADE*/
-int s1w = 16;
-int s1h = 16;
-int s1x = 0;
-int s1y = 0;
-int e1w = 16;
-int e1h = 16;
-int e1x = 310;
-int e1y = 240;
+int s1w = 16; int s1h = 16; int s1x = 0; int s1y = 0;
+int e1w = 16; int e1h = 16; int e1x = 310; int e1y = 240;
 /** CHARS ARE DONE */
-int mousex;
-int mousey;
-int mouseon = 0;
-int red = 0;
-int green = 0;
-int blue = 0;
-int wait = 0;
-int wait2 = 0;
-bool left = 0;
-bool right = 0;
-bool up = 0;
-bool down = 0;
+int mousex; int mousey; int mouseon = 0;
+int red = 0; int green = 0; int blue = 0;
+int wait = 0; int wait2 = 0;
+bool left = 0; bool right = 0; bool up = 0; bool down = 0;
 bool shift = 0;
 
 int main ( int argc, char** argv ) { // init for SDL
