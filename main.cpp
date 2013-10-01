@@ -2,18 +2,6 @@
  *  Gfx example and Audio example.
  */
 
-// The todos below are for all files in this project.
-// TODO: Enable mouse support.
-// TODO: Make input easier to interface with.
-// TODO: Increase gfx support with common functions.
-// TODO: Add library for game support.
-// TODO: Enable WAV playback support.
-// TODO: Make variation of library that enables OpenGL support.
-// TODO: Improve debugging code.
-// TODO: Do as much of main loop in library.
-// TODO: Add in support for changing mouse cursor.
-// TODO: Add in font support.
-
 #ifdef __cplusplus  // choose what c++ io lib to use
     #include <cstdlib>
 #else
