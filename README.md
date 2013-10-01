@@ -1,7 +1,7 @@
 Game
 ====
 
-A Simple Game. Just Run From the bad Guy.
+A Simple Game. Just Run From the Bad Guy.
 
 TODO:
 
