@@ -32,10 +32,8 @@ Uint32 waittime = 1000.0f/FPS;
 Uint32 framestarttime = 0;
 Sint32 delaytime;
 /** BULLETS ARE CREATED */
-int bulletf90w = 16;
-int bulletf90w = 16;
-int bulletf45w = 16;
-int bulletf45h = 16;
+int bulletw = 16;
+int bulleth = 16;
 /** BULLETS ARE DONE */
 /**CHARS ARE MADE*/
 int s1w = 16;
