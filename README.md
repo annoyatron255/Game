@@ -1,7 +1,7 @@
 Game
 ====
 
-A Simple Game. Just Run From the bad Guy.
+A Simple Game. Just Run From the Bad Guy.
 
 TODO:
 
@@ -17,3 +17,11 @@ TODO:
 	Add in font support.
 	Render Better using SDL Textures.
 	Convert game to a sidescoller.
+	
+	Graphical TODO:
+	    Convert bmp imagess to sidescrooler.
+	    add walls, coins, buttons, and mouse curser.
+	  
+	    
+	    
+	  
