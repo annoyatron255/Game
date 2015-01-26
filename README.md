@@ -25,7 +25,9 @@ TODO:
 Compiling on Linux
 ------------------
 Run (must have SDL2 and g++)
+
 	g++ -o build *.cpp -lSDL2
+
 or some variation.	    
 	    
 	  
