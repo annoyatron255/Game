@@ -1,7 +1,6 @@
 /** Main.cpp controls lib.h for a simple
  *  Gfx example and Audio example.
  */
-
 #include "Gfx.h" // general gfx lib I made for SDL
 #include "Input.h"
 #include "General.h"

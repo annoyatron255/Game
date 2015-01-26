@@ -9,7 +9,7 @@
 #ifndef __Game__Sprite__
 #define __Game__Sprite__
 
-#include <SDL_rect.h>
+#include <SDL2/SDL_rect.h>
 
 #include "Input.h"
 

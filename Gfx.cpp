@@ -1,6 +1,7 @@
 /*
 Gfx Functions
 */
+#include <SDL2/SDL.h>
 #include "Gfx.h"
 
 Gfx::Gfx() {

@@ -1,8 +1,8 @@
 #ifndef Gfx_h
 #define Gfx_h
 
-#include <SDL.h>
-#include <SDL_render.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_render.h>
 
 class Gfx {
 	public:
