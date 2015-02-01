@@ -67,12 +67,6 @@ int main ( int argc, char** argv ) {
 		if ((frameEndTime - frameStartTime) < (1000/60)) {
 			SDL_Delay((1000 / 60) - (frameEndTime - frameStartTime));
 		}
-		
-		/*
-		if ((1000 / 60) < (frameEndTime - frameStartTime)) {
-			SDL_Delay((frameEndTime - frameStartTime) - (1000 / 60));
-		}
-		*/
     }
 	
 	delete sprite;
