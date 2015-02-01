@@ -61,10 +61,18 @@ int main ( int argc, char** argv ) {
 		++frames;
 	
 		fps = frames / (SDL_GetTicks() / 1000);
-	
+		
+		// Supposed ms per frame is 16.6666ms since 1000/60
+		// if frame finishes early
+		if ((frameEndTime - frameStartTime) < (1000/60)) {
+			SDL_Delay((1000 / 60) - (frameEndTime - frameStartTime));
+		}
+		
+		/*
 		if ((1000 / 60) < (frameEndTime - frameStartTime)) {
 			SDL_Delay((frameEndTime - frameStartTime) - (1000 / 60));
 		}
+		*/
     }
 	
 	delete sprite;
