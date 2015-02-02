@@ -35,7 +35,7 @@ void Gfx::update() {
     SDL_RenderPresent( m_gRenderer );
 }
 
-void Gfx::clearScreen(int r, int b, int g) {
+void Gfx::clearScreen(int r, int g, int b) {
     SDL_SetRenderDrawColor( m_gRenderer, r, g, b, 0xFF );
     SDL_RenderClear( m_gRenderer );
 }
