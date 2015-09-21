@@ -6,22 +6,11 @@
 #include "input.h"
 #include "entity.h"
 
-class Player: public Entity {
+class Player {
 	public:
-		Player(SDL_Rect rectInput, SDL_Texture* textureInput/*,   Input up*/);
-		SDL_Rect movePlayer(/*SDL_Rect rectInput*/);
+		Player(SDL_Rect rectInput, SDL_Texture* textureInput);
+		void movePlayer();
 	private:
-		//SDL_Rect _rect;
 		Entity player;
-		Input input;
-		//SDL_Texture* _texture;
-		//Gfx gfx;
-		//Input up (SDLK_UP);
-		//SDL_Rect rectInput;
-		//Input up;
-		//Input up;
-		//Input down; //(SDLK_DOWN);
-		//Input left; //(SDLK_LEFT);
-		//Input right;//(SDLK_RIGHT);
 };
 #endif

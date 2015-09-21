@@ -2,11 +2,7 @@
    Gfx Functions
    */
 #include "gfx.h"
-#include <cstdio>
-
-/*Gfx::Gfx() {
-
-  }*/
+#include <cstdio> //switch to iostream sometime
 
 SDL_Window* m_window;
 SDL_Renderer* m_gRenderer;
@@ -50,22 +46,13 @@ namespace gfx {
 		SDL_RenderFillRect( m_gRenderer, &rect );
 	}
 
-	SDL_Texture* createTexture(const char* file, int spriteCode) {
+	SDL_Texture* createTexture(const char* file) {
 		SDL_Surface* surface = NULL;
 		SDL_Texture* texture = NULL;
 
 		surface = SDL_LoadBMP(file);
 
-		if (spriteCode == 0) {
-			SDL_SetColorKey(surface, SDL_TRUE, SDL_MapRGB(surface->format, 0xFF, 0, 0xFF));
-		}
-
-		// 1 for sneek sprite
-		// different color key required
-		if (spriteCode == 1) {
-			SDL_SetColorKey(surface, SDL_TRUE, SDL_MapRGB(surface->format, 0, 0, 0));
-		}
-
+		SDL_SetColorKey(surface, SDL_TRUE, SDL_MapRGB(surface->format, 0xFF, 0, 0xFF));
 		texture = SDL_CreateTextureFromSurface(m_gRenderer, surface);
 
 		SDL_FreeSurface(surface);

@@ -6,7 +6,6 @@
 #include "input.h"
 #include "general.h"
 #include "player.h"
-//#include <cstdio>
 #include <iostream>
 #define screenw 640
 #define screenh 480
@@ -28,16 +27,16 @@ int main ( int argc, char** argv ) {
 	//Gfx gfx;
 	//Gfx Config
 	gfx::gfxinit(screenw, screenh); // open window with 640x480 res. 
-	SDL_Texture* s1Texture = gfx::createTexture("gfx/s1.bmp", 0);
-	SDL_Texture* s1TextureShift = gfx::createTexture("gfx/s1sneek.bmp", 1);
-	SDL_Texture* e1Texture = gfx::createTexture("gfx/e1.bmp", 0);
+	SDL_Texture* s1Texture = gfx::createTexture("gfx/s1.bmp");
+	SDL_Texture* s1TextureShift = gfx::createTexture("gfx/s1sneek.bmp");
+	SDL_Texture* e1Texture = gfx::createTexture("gfx/e1.bmp");
 	//Gfx Rects
 	SDL_Rect e1Rect = { 0,0,/*310, 240,*/ 16, 16 }; //enemy x y w h
 	SDL_Rect s1Rect = { 40, 40, 18, 24 }; //player x y w h
 	//General
 	//General general;
 	//Input
-	Input input;
+	//Input input;
 	//Input up (SDLK_UP);
 
 	//Dependent Classes
@@ -47,25 +46,21 @@ int main ( int argc, char** argv ) {
 	//float fps, frames, frameStartTime, frameEndTime;
 
 	/* program main loop */
-	while (!(input.getKeyState(SDLK_ESCAPE) || input.getQuit())) {
+	while (!(input::getKeyState(SDLK_ESCAPE) || input::getQuit())) {
 		// get time when frame starts
 		//frameStartTime = SDL_GetTicks();
 
-		//input.inputLoop();
-		//sprite.move(input, s1Rect, e1Rect);
 		//general.checkCollision(s1Rect, e1Rect, screenw, screenh);
 
 		if (screenR > screenRout) {screenR--;} else
-		if (screenR < screenRout) {screenR++;}
+			if (screenR < screenRout) {screenR++;}
 		if (screenG > screenGout) {screenG--;} else
-		if (screenG < screenGout) {screenG++;}
+			if (screenG < screenGout) {screenG++;}
 		if (screenB > screenBout) {screenB--;} else
-		if (screenB < screenBout) {screenB++;}
-		
-		//std::cout << (int)input.getKeyState(SDLK_g);
+			if (screenB < screenBout) {screenB++;}
 
 		gfx::clearScreen(screenR, screenG, screenB);
-		s1Rect = s1.movePlayer(/*s1Rect*/);
+		s1.movePlayer(/*s1Rect*/);
 		//if (!shift.getKeyState()) {
 		//s1Rect.x += 1;
 		//gfx.drawTexture(s1Texture, s1Rect);
