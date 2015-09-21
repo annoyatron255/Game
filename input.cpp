@@ -3,9 +3,9 @@
 #include <iostream>
 #include "input.h"
 
-Input::Input(SDL_Keycode keyInput) {
-	key = keyInput;
-	keyState = false;
+Input::Input(/*SDL_Keycode keyInput*/) {
+	//key = keyInput;
+	//keyState = false;
 	//const Uint8 *state = SDL_GetKeyboardState(NULL);
 }
 
@@ -30,14 +30,22 @@ Input::Input(SDL_Keycode keyInput) {
   return keyState;
   }*/
 
-bool Input::getKeyState() {
+bool Input::getKeyState(SDL_Keycode keyInput) {
+	_key = keyInput;
 	//const Uint8 *state = SDL_GetKeyboardState(NULL);
-	return state[SDL_SCANCODE_RETURN/*SDL_GetScancodeFromKey(key)*/];
+	SDL_PumpEvents();
+	//while ((SDL_PollEvent(&event)) != 0) {}
+	return state[SDL_GetScancodeFromKey(_key)];
 }
 
 bool Input::getQuit() {
 	SDL_Event event;
 	if (SDL_PollEvent(&event)) {
+		if (event.type == SDL_QUIT) {
+			return true; 
+		} else {
+			return false;
+		}/*
 		switch (event.type) {
 			case SDL_QUIT:
 				return true;
@@ -46,7 +54,7 @@ bool Input::getQuit() {
 				break;
 			case SDL_KEYUP:
 				break;
-		}
+		}*/
 	}
 }
 /*

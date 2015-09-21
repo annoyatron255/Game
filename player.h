@@ -4,15 +4,17 @@
 //#include <stdlib.h>
 #include <SDL2/SDL.h>
 #include "input.h"
+#include "entity.h"
 
-
-class Player {
+class Player: public Entity {
 	public:
-		Player(SDL_Rect rectInput, SDL_Texture* textureInput/*, Input up*/);
+		Player(SDL_Rect rectInput, SDL_Texture* textureInput/*,   Input up*/);
 		SDL_Rect movePlayer(/*SDL_Rect rectInput*/);
 	private:
-		SDL_Rect rect;
-		SDL_Texture* texture;
+		//SDL_Rect _rect;
+		Entity player;
+		Input input;
+		//SDL_Texture* _texture;
 		//Gfx gfx;
 		//Input up (SDLK_UP);
 		//SDL_Rect rectInput;

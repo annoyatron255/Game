@@ -25,30 +25,29 @@ Uint8 screenBout = 0;
 
 int main ( int argc, char** argv ) {
 	//Load Classes
-	Gfx gfx;
+	//Gfx gfx;
 	//Gfx Config
-	gfx.gfxinit(screenw, screenh); // open window with 620x480 res. with 8 bit color
-	SDL_Texture* s1Texture = gfx.createTexture("gfx/s1.bmp", 0);
-	SDL_Texture* s1TextureShift = gfx.createTexture("gfx/s1sneek.bmp", 1);
-	SDL_Texture* e1Texture = gfx.createTexture("gfx/e1.bmp", 0);
+	gfx::gfxinit(screenw, screenh); // open window with 640x480 res. 
+	SDL_Texture* s1Texture = gfx::createTexture("gfx/s1.bmp", 0);
+	SDL_Texture* s1TextureShift = gfx::createTexture("gfx/s1sneek.bmp", 1);
+	SDL_Texture* e1Texture = gfx::createTexture("gfx/e1.bmp", 0);
 	//Gfx Rects
 	SDL_Rect e1Rect = { 0,0,/*310, 240,*/ 16, 16 }; //enemy x y w h
 	SDL_Rect s1Rect = { 40, 40, 18, 24 }; //player x y w h
 	//General
 	//General general;
 	//Input
-	Input escape (SDLK_ESCAPE);
-	Input shift (SDLK_LSHIFT);
+	Input input;
 	//Input up (SDLK_UP);
 
 	//Dependent Classes
 	//Player Class
-	Player s1 (s1Rect, s1Texture);//, up);
+	Player s1(s1Rect, s1Texture);//, up);
 
 	//float fps, frames, frameStartTime, frameEndTime;
 
 	/* program main loop */
-	while (!(escape.getKeyState() || escape.getQuit())) {
+	while (!(input.getKeyState(SDLK_ESCAPE) || input.getQuit())) {
 		// get time when frame starts
 		//frameStartTime = SDL_GetTicks();
 
@@ -62,21 +61,22 @@ int main ( int argc, char** argv ) {
 		if (screenG < screenGout) {screenG++;}
 		if (screenB > screenBout) {screenB--;} else
 		if (screenB < screenBout) {screenB++;}
+		
+		//std::cout << (int)input.getKeyState(SDLK_g);
 
-
-		gfx.clearScreen(screenR, screenG, screenB);
+		gfx::clearScreen(screenR, screenG, screenB);
 		s1Rect = s1.movePlayer(/*s1Rect*/);
 		//if (!shift.getKeyState()) {
 		//s1Rect.x += 1;
-		gfx.drawTexture(s1Texture, s1Rect);
+		//gfx.drawTexture(s1Texture, s1Rect);
 		//gfx.drawRect(s1Rect, 0, 0, 100);
 		//} else {
 		//gfx.drawTexture(s1TextureShift, s1Rect);
 		//}
 
-		gfx.drawTexture(e1Texture, e1Rect);
+		gfx::drawTexture(e1Texture, e1Rect);
 
-		gfx.update();
+		gfx::update();
 		/* Using Vsync -- no need
 		// get time at the end of frame after updating
 		frameEndTime = SDL_GetTicks();
@@ -90,7 +90,7 @@ int main ( int argc, char** argv ) {
 		}*/
 	}
 
-	gfx.close();
+	gfx::close();
 
 	return 0; // return success!
 }

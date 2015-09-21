@@ -7,17 +7,17 @@
 
 class Input {
 	public:
-		Input(SDL_Keycode keyInput);
-		bool getKeyState();
+		Input();
+		bool getKeyState(SDL_Keycode keyInput);
 		bool getQuit();
 	protected:
-		const Uint8 *state = SDL_GetKeyboardState(NULL);
+		//const Uint8 *state = SDL_GetKeyboardState(NULL);
 	private:
 		//bool getKeyDown(SDL_Keycode key);
 		//bool getKeyUp(SDL_Keycode key);
-		SDL_Keycode key;
-		//const Uint8 *state = SDL_GetKeyboardState(NULL);
-		bool keyState;// = false;
+		SDL_Keycode _key;
+		const Uint8 *state = SDL_GetKeyboardState(NULL);
+		//bool keyState;// = false;
 
 };
 #endif
