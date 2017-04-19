@@ -1,7 +1,7 @@
 #ifndef General_h
 #define General_h
 
-#include <SDL_rect.h>
+#include <SDL2/SDL_rect.h>
 
 #include "Input.h"
 

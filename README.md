@@ -22,6 +22,11 @@ TODO:
 	    Convert bmp imagess to sidescrooler.
 	    add walls, coins, buttons, and mouse curser.
 	  
-	    
-	    
+Compiling on Linux
+------------------
+Run (must have SDL2 and g++)
+
+	g++ -o build *.cpp -lSDL2
+
+or some variation. (Mathboy19)    
 	  
