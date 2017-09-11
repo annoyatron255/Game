@@ -2,6 +2,24 @@ Game
 
 A Simple Game. Just Run From the Bad Guy.
 
+Title: 
+
+Run From the Bad Guy
+
+Objective: 
+
+Escape from the Bad Guy
+
+How to Play:
+
+Use the up and down arrows to navigate throught the street.
+
+Rules:
+
+1. Do not hit any street signed. 
+2. Do not fall into any pot holes.
+3. Do not get hit by a car. 
+
 TODO:
 
 	Enable mouse support.
