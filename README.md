@@ -1,8 +1,8 @@
-Game
+# Game
 
-A Simple Game. Just Run From the Bad Guy.
+## A Simple Game. Just Run From the Bad Guy.
 
-TODO:
+## TODO:
 
 	Enable mouse support.
 	Make input easier to interface with.
@@ -20,6 +20,8 @@ TODO:
 	Graphical TODO:
 	    Convert bmp imagess to sidescrooler.
 	    add walls, coins, buttons, and mouse curser.
+	    
+## A C++ based game. 
 	  
 	    
 	    
